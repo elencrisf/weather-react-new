@@ -30,7 +30,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=Vancouver&units=metric&appid=${process.env.REACT_APP_AUTH_TOKEN}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=Vancouver&units=metric&appid=${process.env.REACT_APP_AUTH_TOKEN}`)
     .then(response => response.json()) // first of all you use the same argument for both requests. both the response and parsed data uses the same name and it's a bad practice. try to avoid that by calling the json one something like data or more meaningful name
     .then(response => {
 
@@ -76,7 +76,7 @@ let sunrise = response.sys.sunrise,
     // const country = e.target.elements.country.value;
     e.preventDefault();
     try {
-      const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_AUTH_TOKEN}`);
+      const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_AUTH_TOKEN}`);
       const response = await api_call.json();
       // let parseZoneTime = parseTime(response.sys.synrise, response.timezone);
       console.log(response);

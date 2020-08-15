@@ -13,7 +13,7 @@ class Title extends React.Component {
             <div className="title-container__icon">          
                 <img
                 src={
-                "http://openweathermap.org/img/wn/" + this.props.icon + ".png"
+                "https://openweathermap.org/img/wn/" + this.props.icon + ".png"
                 }
                 alt={this.props.icon}
                 />
